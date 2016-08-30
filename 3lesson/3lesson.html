@@ -25,6 +25,58 @@
     		}
     		console.log(h);
 		}
+		
+		
+		
+		//Практика
+
+		var users = [
+			{
+				firstName: 'Ivan',
+				lastName: 'Ivanov',
+				birthDay: '01.01.1911',
+				phones: [
+					'1111111111',
+					'2222222222'
+				]
+
+			},
+			{
+				firstName: 'Petr',
+				lastName: 'Petrov',
+				birthDay: '02.02.1922',
+				phones: [
+					'3333333333',
+					'4444444444'
+				]
+
+			},
+			{
+				firstName: 'Sidr',
+				lastName: 'Sidorov',
+				birthDay: '03.03.1933',
+				phones: [
+					'5555555555',
+					'6666666666'
+				]
+
+			}
+		];
+		// Promt
+		//var user = {};
+
+		users.firstName = prompt('Введите имя');
+		users.firstName = prompt('Введите фамилию');
+		users.firstName = prompt('Введите дату рождения');
+		users.phones = [];
+		users.phones[0] = prompt('Введите номер телефона');
+		users.phones[1] = prompt('Введите второй номер телефона');
+
+		users.push(users);
+
+		for(var i = 0; i < users.length; i++) {
+			console.log('Имя: ' + users[i].firstName, 'Фамилия: ' + users[i].lastName, 'Дата рождения: ' + users[i].birthDay, 'Телефоны: ' + users[i].phones[0] + ', ' + users[i].phones[1]);
+		}
 
 		</script>
 	<body>
