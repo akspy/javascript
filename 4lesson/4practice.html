@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>4 Practice</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+				var users = [
+			{
+				firstName: 'Ivan',
+				lastName: 'Ivanov',
+				birthDay: '01.01.1911',
+				phones: [
+					'1111111111',
+					'2222222222'
+				]
+			},
+			{
+				firstName: 'Petr',
+				lastName: 'Petrov',
+				birthDay: '02.02.1922',
+				phones: [
+					'3333333333',
+					'4444444444'
+				]
+			},
+			{
+				firstName: 'Sidr',
+				lastName: 'Sidorov',
+				birthDay: '03.03.1933',
+				phones: [
+					'5555555555',
+					'6666666666'
+				]
+			}
+		];
+		// Promt
+		//var user = {};
+		function addUser(users) {
+			var user = {};
+			user.firstName = prompt('Введите имя');
+			user.lastName = prompt('Введите фамилию');
+			user.birthDay = prompt('Введите дату рождения');
+			user.phones = [];
+			while (true) {
+				var phone = prompt('Номер телефона:(для выхода введите пустой номер)');
+				if (!phone) break;
+				user.phones.push(phone);
+			}
+			users.push(user);
+		}
+
+		addUser(users);
+
+		for(var i = 0; i < users.length; i++) {
+			console.log('Имя: ' + users[i].firstName, 'Фамилия: ' + users[i].lastName, 'Дата рождения: ' + users[i].birthDay, 'Телефоны: ' + users[i].phones[0] + ', ' + users[i].phones[1]);
+		}
+
+		</script>
+	<body>
+</html>
