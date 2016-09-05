@@ -55,6 +55,16 @@
 		for(var i = 0; i < users.length; i++) {
 			console.log('Имя: ' + users[i].firstName, 'Фамилия: ' + users[i].lastName, 'Дата рождения: ' + users[i].birthDay, 'Телефоны: ' + users[i].phones[0] + ', ' + users[i].phones[1]);
 		}
+		
+		function exportCsv(users) {
+			var file = {};
+			for(var i = 0; i < users.length; i++) {
+				var file[i] = (users[i].firstName + ';' + users[i].lastName + ';' + users[i].birthDay + ';' + users[i].phones[0] + ';' + users[i].phones[1]);
+			}
+			return file
+		}
+
+		exportCsv(users);
 
 		</script>
 	<body>
