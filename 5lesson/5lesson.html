@@ -53,7 +53,16 @@
 		console.log(objectToQueryString({user: 'Dmitry'})); // user=Dmitry console.log(objectToQueryString({user: 'Dmitry', password: 'pass'})); // user=Dmitry&password=pass console.log(objectToQueryString({user: 'Dmitry', password: 'pass', id=1})); // user=Dmitry&password=pass&id=1
 		*/
 
-
+		function objectToQueryString(object) {
+			var result = '';
+			for (var prop in object) {
+				result += prop + '=' + object[prop] + '&';
+			}
+			return result;
+		}
+		console.log(objectToQueryString({user: 'Dmitry'})); // user=Dmitry
+		console.log(objectToQueryString({user: 'Dmitry', password: 'pass'})); // user=Dmitry&password=pass 
+		console.log(objectToQueryString({user: 'Dmitry', password: 'pass', id=1})); // user=Dmitry&password=pass&id=1
 
 		/*	Практика
 				Продолжаем адресную книгу:
