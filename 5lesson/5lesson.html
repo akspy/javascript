@@ -58,7 +58,7 @@
 			for (var prop in object) {
 				result += prop + '=' + object[prop] + '&';
 			}
-			return result;
+			return result.slice(0,-1);
 		}
 		console.log(objectToQueryString({user: 'Dmitry'})); // user=Dmitry
 		console.log(objectToQueryString({user: 'Dmitry', password: 'pass'})); // user=Dmitry&password=pass 
